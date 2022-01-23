@@ -1,27 +1,35 @@
-let vitesseVirage = 13
-let vitesse = 45
-
+//% color="#AA278D"
 namespace pilotage {
 
-
+    //% block="aller à droite"
     export function aller_a_droite() {
-        k_Bit.Motor(MotorObs.RightSide, MotorDir.Forward, vitesseVirage)
-        k_Bit.Motor(MotorObs.LeftSide, MotorDir.Forward, 100 - vitesseVirage)
+        k_Bit.Motor(MotorObs.RightSide, MotorDir.Forward, 13)
+        k_Bit.Motor(MotorObs.LeftSide, MotorDir.Forward, 100 - 13)
     }
-    export function obstacle_a_droite_() {
+
+    //% block="obstacle à droite ?"
+    export function obstacle_a_droite() {
         return k_Bit.obstacle(MotorObs.RightSide) == 0
     }
-    export function obstacle_a_gauche_() {
+
+    //% block="obstacle à gauche ?"
+    export function obstacle_a_gauche() {
         return k_Bit.obstacle(MotorObs.LeftSide) == 0
     }
-    export function obstacle_devant_() {
+
+    //% block="obstacle devant ?"
+    export function obstacle_devant() {
         return k_Bit.ultra() < 100
     }
+    
+    //% block="aller à gauche"
     export function aller_a_gauche() {
-        k_Bit.Motor(MotorObs.LeftSide, MotorDir.Forward, vitesseVirage)
-        k_Bit.Motor(MotorObs.RightSide, MotorDir.Forward, 100 - vitesseVirage)
+        k_Bit.Motor(MotorObs.LeftSide, MotorDir.Forward, 13)
+        k_Bit.Motor(MotorObs.RightSide, MotorDir.Forward, 100 - 13)
     }
+
+    //% block="avancer"
     export function avancer() {
-        k_Bit.run(DIR.RunForward, vitesse)
+        k_Bit.run(DIR.RunForward, 45)
     }
 }
