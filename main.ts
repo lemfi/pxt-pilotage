@@ -1,4 +1,4 @@
-let vitesse = 45
+var vitesse = 45
 
 //% color="#AA278D"
 namespace pilotage {
