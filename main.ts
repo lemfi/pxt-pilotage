@@ -1,3 +1,5 @@
+let vitesse = 45
+
 //% color="#AA278D"
 namespace pilotage {
 
@@ -30,6 +32,6 @@ namespace pilotage {
 
     //% block="avancer"
     export function avancer() {
-        k_Bit.run(DIR.RunForward, 45)
+        k_Bit.run(DIR.RunForward, vitesse)
     }
 }
